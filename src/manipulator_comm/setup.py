@@ -10,6 +10,7 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        ('share/manipulator_comm/launch', ['launch/manipulator_launch.py']),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -20,6 +21,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
+            'i2c_comm_node = manipulator_comm.i2c_comm_node:main',
         ],
     },
 )
