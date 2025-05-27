@@ -1,0 +1,8 @@
+services:
+  ros2:
+    build: .
+    container_name: ros2_manipulator
+    volumes:
+      - ./ros2_ws:/ros2_ws
+    stdin_open: true
+    tty: true
