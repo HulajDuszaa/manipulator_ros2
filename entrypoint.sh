@@ -8,11 +8,10 @@ source /opt/ros/humble/setup.bash
 
 # Build the workspace if needed
 if [ -d "/ros2_ws/src" ]; then
-    if [ ! -d "/ros2_ws/install" ] || [ -z "$(ls -A /ros2_ws/install)" ]; then
-        echo "Building ROS 2 workspace..."
-        cd /ros2_ws
-        colcon build
-    fi
+    echo "Building ROS 2 workspace..."
+    cd /ros2_ws
+    colcon build
+
 fi
 
 # Source the workspace overlay
